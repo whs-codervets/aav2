@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const Card = (props) => {
+const MainContainer = (props) => {
   return (
     <View style={styles.containerStyle}>
       {props.children}
@@ -11,6 +11,9 @@ const Card = (props) => {
 
 const styles = {
   containerStyle: {
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
     borderWidth: 1,
     borderRadius: 2,
     borderColor: '#ddd',
@@ -22,8 +25,10 @@ const styles = {
     elevation: 1,
     marginLeft: 5,
     marginRight: 5,
-    marginTop: 10
+    marginTop: 10,
+    padding: 15
   }
+  
 };
 
-export { Card };
+export default MainContainer;
